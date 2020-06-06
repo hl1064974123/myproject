@@ -1,0 +1,48 @@
+.hl-border-div-radiu-shadow{
+		border-radius: 10px;
+		box-shadow:0px 0px 5px black ;
+		position: relative;
+		top: 0px;
+		left: 0px;
+		--div-width:;
+		--div-height:;
+		--div-top:;
+		--div-left:;
+		--div-animation-time: ;
+	}
+	
+	
+	@keyframes startk
+	{
+		from {opacity: 0;width: 0px;height: 0px;top: var(--div-top);left: var(--div-left);}
+		to {opacity: 1;width: var(--div-width);height: var(--div-height);top: 0px;left: 0px;}
+	}
+	
+	@-webkit-keyframes startk /* Safari and Chrome */
+	{
+		from {opacity: 1;width: var(--div-width);height: var(--div-height);top: 0px;left: 0px;}
+		to {opacity: 0;width: 0px;height: 0px;top: var(--div-top);left: var(--div-left);}
+	}
+	
+	@keyframes myfirst
+	{
+		from {opacity: 1;width:var(--div-width);height: var(--div-height);top: 0px;left: 0px;}
+		to {opacity: 0;width: 0px;height: 0px;top: var(--div-top);left: var(--div-left);}
+		
+	}
+	
+	@-webkit-keyframes myfirst /* Safari and Chrome */
+	{
+		from {opacity: 1;width:var(--div-width);height: var(--div-height);top: 0px;left: 0px;}
+		to {opacity: 0;width: 0px;height: 0px;top: var(--div-top);left: var(--div-left);}
+	}
+	.guanbi
+	{
+		animation:myfirst var(--div-animation-time,1s);
+		-webkit-animation:myfirst var(--div-animation-time,1s); /* Safari and Chrome */
+
+	}
+	.kaishi{
+		animation: startk var(--div-animation-time,1s);
+		-webkit-animation:startk var(--div-animation-time,1s); /* Safari and Chrome */
+	}
