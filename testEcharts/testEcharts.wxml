@@ -1,0 +1,19 @@
+<view class="container">
+ <!-- 导航栏 -->
+  <view class="navbar">
+    <block wx:for="{{navbarTitle}}" wx:key="index">
+      <view class="navbar-item {{navbarActiveIndex === index ? 'navbar-item-active' : ''}}" data-navbar-index="{{index}}" catchtap="onNavBarTap">
+        <text>{{item}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="movie-content-wrapper">
+    <swiper  style="height:100%;width:100;" current="{{navbarActiveIndex}}" bindanimationfinish="onBindAnimationFinish">
+      <swiper-item  style="height:100%;width:100;" wx:for="{{navbarTitle}}" wx:key="index">
+        <scroll-view scroll-y="{{true}}" style="height:100%;width:100;">
+            <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>
